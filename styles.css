@@ -84,6 +84,18 @@ h1, h2 { font-family: var(--serif); font-weight: 500; letter-spacing: 0; }
 .story-copy h2 { font-size: clamp(38px, 4vw, 52px); }
 .story-copy > p:not(.eyebrow) { color: var(--muted); font-size: 13px; line-height: 1.9; }
 .story-copy .text-link { margin-top: 13px; }
+.product-gallery { padding-block: 34px 100px; }
+.gallery-heading { margin-bottom: 28px; }
+.gallery-heading .eyebrow { margin-bottom: 15px; }
+.gallery-heading h2 { margin: 0; font: 500 clamp(36px, 4.5vw, 54px)/1.12 var(--serif); }
+.gallery-heading h2 em { color: var(--berry); }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.gallery-item { min-width: 0; margin: 0; overflow: hidden; background: #fff; }
+.gallery-item img { width: 100%; aspect-ratio: 1.1; object-fit: cover; background: var(--paper-deep); transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-item figcaption { min-height: 54px; padding: 10px 12px; display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.gallery-item figcaption span { color: var(--muted); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+.gallery-item figcaption strong { color: var(--berry); font: 500 17px var(--serif); }
 .values-band { padding-block: 71px 76px; background: #e9e9df; }
 .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
 .value-item { position: relative; padding: 4px 11% 3px 0; }
@@ -226,6 +238,13 @@ h1, h2 { font-family: var(--serif); font-weight: 500; letter-spacing: 0; }
   .story-image img { height: min(105vw, 420px); }
   .story-copy h2 { font-size: 42px; }
   .story-copy > p:not(.eyebrow) { font-size: 12px; }
+  .product-gallery { padding-block: 0 62px; }
+  .gallery-heading { margin-bottom: 20px; }
+  .gallery-heading h2 { max-width: 350px; font-size: 37px; }
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .gallery-item img { aspect-ratio: 1; }
+  .gallery-item figcaption { min-height: 47px; padding: 8px; }
+  .gallery-item figcaption strong { font-size: 15px; }
   .values-band { padding-block: 50px; }
   .values-grid { grid-template-columns: 1fr; }
   .value-item, .value-item + .value-item { padding: 20px 0; border-left: 0; }
