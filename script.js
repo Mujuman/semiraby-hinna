@@ -29,16 +29,3 @@ document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-document.querySelector('#booking-form').addEventListener('submit', (event) => {
-  event.preventDefault();
-  const form = new FormData(event.currentTarget);
-  const subject = encodeURIComponent(`Henna inquiry: ${form.get('occasion')}`);
-  const body = encodeURIComponent([
-    `Name: ${form.get('name')}`,
-    `Email: ${form.get('email')}`,
-    `Occasion: ${form.get('occasion')}`,
-    '',
-    form.get('message') || 'No additional details provided.'
-  ].join('\n'));
-  window.location.href = `mailto:teyuteyba@gmail.com?subject=${subject}&body=${body}`;
-});
